@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <link rel = "icon" href = "https://cdn3.iconfinder.com/data/icons/medical-round-metaphors/150/MedicalIconSetCollection05-512.png" type = "image/x-icon">
+        <title>About Us</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <style>
+			.hero {
+				position: relative; 
+				height: 78vh;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.hero::before {    
+				height: 90vh;
+				content: "";
+				background-image: url('https://www.caremountmedical.com/wp-content/uploads/2020/04/heartcovid-scaled.jpeg');
+				background-size: cover;
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				left: 0px;
+				opacity: 0.6;
+			}
+			.about{
+				width: 80%;
+				background: rgba(5, 5, 5, 0.548);
+				color: #fff;
+				top: 35%;
+				left: 50%;
+				position: absolute;
+				transform: translate(-50%,-50%);
+				box-sizing: border-box;
+				padding: 50px 30px;
+				border-radius: 20px;
+			}
+			.big-circle{
+				width: 150px;
+				height: 150px;
+				border: 10px solid #46E097;
+				border-radius: 50%;
+				margin: auto;
+				position: relative;
+			}
+			.small-circle{
+				width: 140px;
+				height: 140px;
+				border: 10px solid #DAF9F6;
+				border-radius: 50%;
+				position: absolute;
+				top: -5px;
+				left: -5px;
+				background-image: url("{{url_for('static', filename='souvikpal.jpeg')}}");
+				background-position: center;
+				background-size: cover;
+			}
+			.small-circle2{
+				width: 140px;
+				height: 140px;
+				border: 10px solid #DAF9F6;
+				border-radius: 50%;
+				position: absolute;
+				top: -5px;
+				left: -5px;
+				background-image: url("{{url_for('static', filename='sumitgupta.jpg')}}");
+				background-position: center;
+				background-size: cover;
+			}
+			.small-circle3{
+				width: 140px;
+				height: 140px;
+				border: 10px solid #DAF9F6;
+				border-radius: 50%;
+				position: absolute;
+				top: -5px;
+				left: -5px;
+				background-image: url("{{url_for('static', filename='sumitbera.jpg')}}");
+				background-position: center;
+				background-size: cover;
+			}
+			.small-circle4{
+				width: 140px;
+				height: 140px;
+				border: 10px solid #DAF9F6;
+				border-radius: 50%;
+				position: absolute;
+				top: -5px;
+				left: -5px;
+				background-image: url("{{url_for('static', filename='tarpandas.jpg')}}");
+				background-position: center;
+				background-size: cover;
+			}
+			.heading-name{
+				margin: 3px 0;   
+			}
+			.follow_btn{
+				text-decoration: none;
+				background: #46E097;
+				color: #fff;
+				padding: 10px 20px;
+				border-radius: 20px;
+				box-shadow: 2px 2px 1px 1px rgba(70, 224, 151, 0.65);
+				position: relative;
+				top: 1rem;
+			}
+			.follow_btn:hover{
+				color: #46E097;
+				background: #DAF9F6;
+				font-weight: 600;
+			}
+			.team{
+				text-align: center;
+				margin-top: -10rem;
+			}
+      	</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">
+				<img id="brand-image" src="https://cdn3.iconfinder.com/data/icons/medical-round-metaphors/150/MedicalIconSetCollection05-512.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			  <ul class="navbar-nav">
+				<li class="nav-item">
+				  <a class="nav-link" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="/aboutproject">About Project</a>
+				</li>
+				<li class="nav-item active">
+				  <a class="nav-link" href="/aboutus">About Us <span class="sr-only">(current)</span></a>
+				</li>
+			  </ul>
+			</div>
+		</nav>
+
+		<div class="container-fluid bg-secondary text-white p-3 text-center">
+			<h1>About Us</h1>
+		</div>
+
+		<div class="hero">
+			<div class="about text-center">
+				<h4>We are 3rd year CSE students from JIS College Of Engineering. The idea of our project is to present a website which is able to predict whether a person is at risk of being concerned by any kind of heart disease or not. To do so, we use Machine Learning prediction techniques to train the computer based on actual observable outcomes made over thousands of observations stored in a ‘.csv’ file. If a person want’s to know whether he/she runs a risk of a heart disease, he/she must put in his/her data based on the parameters asked through the website. After training the machine based on previous similar data, the machine predicts the possibility of a heart disease of that person.</h4>
+			</div>
+		</div>
+
+		<div class="row team">
+			<div class="col-md-3">
+				<div class="main-box">
+					<div class="big-circle">
+						<div class="small-circle">
+							
+						</div>
+					</div>
+					<h3 class="heading-name">Souvik Pal</h3>
+					<a href="https://www.linkedin.com/in/souvik-pal-4b4138171/" class="follow_btn">Follow</a>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="main-box">
+					<div class="big-circle">
+						<div class="small-circle2">
+							
+						</div>
+					</div>
+					<h3 class="heading-name">Sumit Gupta</h3>
+					<a href="https://www.linkedin.com/in/souvik-pal-4b4138171/" class="follow_btn">Follow</a>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="main-box">
+					<div class="big-circle">
+						<div class="small-circle3">
+							
+						</div>
+					</div>
+					<h3 class="heading-name">Sumit Kr. Bera</h3>
+					<a href="https://www.linkedin.com/in/souvik-pal-4b4138171/" class="follow_btn">Follow</a>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="main-box">
+					<div class="big-circle">
+						<div class="small-circle4">
+							
+						</div>
+					</div>
+					<h3 class="heading-name">Tarpan Das</h3>
+					<a href="https://www.linkedin.com/in/souvik-pal-4b4138171/" class="follow_btn">Follow</a>
+				</div>
+			</div>
+		</div>
+
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</html>

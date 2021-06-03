@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Home</title>
+		<link rel = "icon" href = "https://cdn3.iconfinder.com/data/icons/medical-round-metaphors/150/MedicalIconSetCollection05-512.png" type = "image/x-icon">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<link rel="stylesheet" href="../static/styles.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">
+				<img id="brand-image" src="https://cdn3.iconfinder.com/data/icons/medical-round-metaphors/150/MedicalIconSetCollection05-512.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			  <ul class="navbar-nav">
+				<li class="nav-item active">
+				  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="/aboutproject">About Project</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="/aboutus">About Us</a>
+				</li>
+			  </ul>
+			</div>
+		</nav>
+		<div class="container-fluid bg-secondary text-white p-3 text-center mb-4">
+			<h1>Heart Disease Detection</h1>
+			<h5>Detect if someone has heart disease using Machine Learning and Python!</h5>
+		</div>
+
+		<div class="hero">
+			<div class="container">
+				<form method="POST" action="{{url_for('prediction')}}">
+					<div class="form-group row">
+						<div class="col-12 col-md-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-default"><b>Age</b></span>
+								<input type="number" name="age" id="age" class="form-control" aria-label="Sizing example input" required aria-describedby="inputGroup-sizing-default">
+							</div>
+						</div>
+	
+						<div class="col-12 col-md-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-default"><b>Gender</b></span>
+								<select name="gender" id="gender" class="form-control" id="exampleFormControlSelect2">
+									<option value="1">Male</option>
+									<option value="0">Female</option>
+								</select>
+							</div>		
+						</div>
+					</div>
+	
+					<div class="form-group row">
+						<div class="col-12 col-md-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-default"><b>Height</b></span>
+								<input type="number" name="height" id="height" class="form-control" aria-label="Sizing example input" required aria-describedby="inputGroup-sizing-default">
+							</div>
+						</div>
+	
+						<div class="col-12 col-md-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-default"><b>Weight</b></span>
+								<input type="number" name="weight" id="weight" class="form-control" aria-label="Sizing example input" required aria-describedby="inputGroup-sizing-default">
+							</div>		
+						</div>
+					</div>
+	
+					<div class="form-group row">
+						<div class="col-12 col-md-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-default"><b>Systolic Blood Pressure</b></span>
+								<input type="number" name="aphi" id="aphi" class="form-control" aria-label="Sizing example input" required aria-describedby="inputGroup-sizing-default">
+							</div>
+						</div>
+	
+						<div class="col-12 col-md-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-default"><b>Diastolic Blood Pressure</b></span>
+								<input type="number" name="aplo" id="aplo" class="form-control" aria-label="Sizing example input" required aria-describedby="inputGroup-sizing-default">
+							</div>		
+						</div>
+					</div>
+	
+					<div class="form-group row">
+						<div class="col-12 col-md-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-default"><b>Cholestrol</b></span>
+								<select name="cho" id="cho" class="form-control" id="exampleFormControlSelect2">
+									<option value="1">Low</option>
+									<option value="2" selected>Medium</option>
+									<option value="3">High</option>
+								</select>
+							</div>
+						</div>
+	
+						<div class="col-12 col-md-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-default"><b>Glucose</b></span>
+								<select name="glu" id="glu" class="form-control" id="exampleFormControlSelect2">
+									<option value="1">Low</option>
+									<option value="2" selected>Medium</option>
+									<option value="3">High</option>
+								</select>
+							</div>		
+						</div>
+					</div>
+	
+					<div class="form-group row">
+						<div class="col-12 col-md-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-default"><b>Smoke</b></span>
+								<select name="smoke" id="smoke" class="form-control" id="exampleFormControlSelect2">
+									<option value="1">Yes</option>
+									<option value="0" selected>No</option>
+								</select>
+							</div>
+						</div>
+	
+						<div class="col-12 col-md-6">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-default"><b>Alcohol</b></span>
+								<select name="alco" id="alco" class="form-control" id="exampleFormControlSelect2">
+									<option value="1">Yes</option>
+									<option value="0" selected>No</option>
+								</select>
+							</div>		
+						</div>
+					</div>
+								
+					<div class="form-group row">
+						<div class="col-12 col-md-12">
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="inputGroup-sizing-default"><b>Physically Active</b></span>
+								<select name="active" id="active" class="form-control" id="exampleFormControlSelect2">
+									<option value="1">Yes</option>
+									<option value="0" selected>No</option>
+								</select>
+							</div>
+						</div>
+					</div>
+						
+					<div class="form-group row">
+						<div class="col-md-10">
+							<button type="submit" class="btn btn-primary">Predict</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</html>
